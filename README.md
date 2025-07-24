@@ -10,3 +10,6 @@ A machine learning project using Logistic Regression to classify iris flower spe
 
 ##  How to Run
 Clone the repo and run the notebook or Streamlit app:
+
+# Author
+Ayushi Poddar
