@@ -7,6 +7,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
+    "import streamlit as st\n",
     "import pandas as pd\n",
     "import seaborn as sns\n",
     "import matplotlib.pyplot as plt\n",
@@ -171,10 +172,10 @@
     "print(df.info())\n",
     "\n",
     "\n",
-    "print(\"\\nMissing values:\\n\", df.isnull().sum())\n",
+    "st.write(\"\\nMissing values:\\n\", df.isnull().sum())\n",
     "\n",
     "\n",
-    "print(\"\\nClass distribution:\\n\", df['species'].value_counts())"
+    "st.write(\"\\nClass distribution:\\n\", df['species'].value_counts())"
    ]
   },
   {
@@ -696,9 +697,9 @@
    "source": [
     "y_pred = model.predict(X_test)\n",
     "\n",
-    "print(\"Accuracy:\", accuracy_score(y_test, y_pred))\n",
-    "print(\"\\nConfusion Matrix:\\n\", confusion_matrix(y_test, y_pred))\n",
-    "print(\"\\nClassification Report:\\n\", classification_report(y_test, y_pred))"
+    "st.write(\"Accuracy:\", accuracy_score(y_test, y_pred))\n",
+    "st.write(\"\\nConfusion Matrix:\\n\", confusion_matrix(y_test, y_pred))\n",
+    "st.write(\"\\nClassification Report:\\n\", classification_report(y_test, y_pred))"
    ]
   }
  ],
